@@ -1,3 +1,5 @@
+
+
 /*
 
 fun main() {
@@ -73,6 +75,9 @@ fun main() {
 
  */
 
+
+/*
+
 fun main() {
 
 
@@ -103,8 +108,50 @@ fun main() {
     }
 
     fun lanzarDado(): Int {
-        return Random.nextInt(1, 7) // Genera un número aleatorio entre 1 y 6
+        return Random.nextInt(1, 7)
     }
 
 
+}
+
+ */
+
+import kotlin.random.Random
+
+fun main() {
+    println("Apuesta todo tú sueldo aquí (No hay devoluci9nes")
+    print("Cuanto quieres apostar? y por que tan poco?perro: ")
+
+    var dinero = readLine()!!.toDouble()
+
+    while (true) {
+        val numeroAleatorio = Random.nextInt(1, 4)
+        println("Número Random : $numeroAleatorio")
+
+        if (numeroAleatorio == 3) {
+            println("Saco tres perdio todo, pero siga intentando.")
+
+        } else if (numeroAleatorio == 2) {
+            dinero /= 2
+
+            println("Ushh se quedo con la mitad de lo que tenia: $dinero")
+
+        } else {
+            dinero *= 2
+
+            println("Ganoooo, duplico sus lukas, siga jugando : $dinero")
+        }
+
+        print("QUieere seguir perdiendo o ganando? (si/no/si): ")
+
+        val respuesta = readLine()
+
+        if (respuesta != "si") {
+
+
+            println("Gracias por dejar money en mi casino, gano: $dinero")
+
+        }
+
+    }
 }
